@@ -1,4 +1,35 @@
-import { useDispatch, useSelector } from "react-redux"; 
+import { useState } from "react";
+import styles from "./ContactForm.module.css";
+
+const ContactForm = ({ onAddContact }) => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAddContact({ name, number });
+    setName("");
+    setNumber("");
+  };
+
+  return (
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <label className={styles.label}>
+        Name:
+        <input className={styles.input} type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      </label>
+      <label className={styles.label}>
+        Number:
+        <input className={styles.input} type="text" value={number} onChange={(e) => setNumber(e.target.value)} />
+      </label>
+      <button className={styles.button} type="submit">Add Contact</button>
+    </form>
+  );
+};
+
+export default ContactForm;
+
+/*import { useDispatch, useSelector } from "react-redux"; 
 import { addContact } from "../../redux/contactsOps";
 import { selectContacts } from "../../redux/contactsSelectors";
 import { ErrorMessage, Field, Form, Formik } from "formik";
@@ -65,4 +96,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm;*/

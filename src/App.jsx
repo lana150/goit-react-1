@@ -1,4 +1,72 @@
-import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import PrivateRoute from "./components/PrivateRoute";
+import RestrictedRoute from "./components/RestrictedRoute";
+import HomePage from "./pages/HomePage";
+import RegistrationPage from "./pages/RegistrationPage";
+import LoginPage from "./pages/LoginPage";
+import ContactsPage from "./pages/ContactsPage";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="register" element={<RestrictedRoute component={RegistrationPage} />} />
+        <Route path="login" element={<RestrictedRoute component={LoginPage} />} />
+        <Route path="contacts" element={<PrivateRoute component={ContactsPage} />} />
+      </Route>
+    </Routes>
+  );
+}
+
+export default App;
+
+
+/*import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import RegistrationPage from "./pages/RegistrationPage";
+import LoginPage from "./pages/LoginPage";
+import ContactsPage from "./pages/ContactsPage";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="register" element={<RegistrationPage />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="contacts" element={<ContactsPage />} />
+      </Route>
+    </Routes>
+  );
+}
+
+export default App;*/
+
+
+/*import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import RegistrationPage from "./pages/RegistrationPage";
+import LoginPage from "./pages/LoginPage";
+import ContactsPage from "./pages/ContactsPage";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/register" element={<RegistrationPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/contacts" element={<ContactsPage />} />
+    </Routes>
+  );
+}
+
+export default App;*/
+
+
+/*import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ContactsForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
@@ -28,4 +96,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;*/

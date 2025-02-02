@@ -16,4 +16,4 @@ const filtersSlice = createSlice({
 
 export const { setFilter } = filtersSlice.actions;
 export const selectFilter = (state) => state.filters.name; // ✅ Додали цей селектор
-export default filtersSlice.reducer;
+export const filterReducer = filtersSlice.reducer;

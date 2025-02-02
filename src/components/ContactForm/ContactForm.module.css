@@ -1,4 +1,37 @@
-.ContactForm {
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/*.ContactForm {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -58,4 +91,4 @@
     border-radius: 5px;
     width: 145px;
     height: 30px;
-}
+}*/
