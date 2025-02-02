@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../redux/auth/selectors";
-import UserMenu from "./UserMenu";
+import UserMenu from "../UserMenu/UserMenu";
 import styles from "./AppBar.module.css";
 
 const AppBar = () => {

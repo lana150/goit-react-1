@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import PrivateRoute from "./components/PrivateRoute";
 import RestrictedRoute from "./components/RestrictedRoute";
-import HomePage from "./pages/HomePage";
-import RegistrationPage from "./pages/RegistrationPage";
-import LoginPage from "./pages/LoginPage";
-import ContactsPage from "./pages/ContactsPage";
+import HomePage from "./pages/ContactsPage/ContactsPage";
+import RegistrationPage from "./pages/RegisterPage/RegistrationPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 
 function App() {
   return (
